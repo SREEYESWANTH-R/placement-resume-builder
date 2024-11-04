@@ -1,0 +1,376 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f2f5f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Section Headings */
+section h3 {
+    font-size: 1.3em;
+    color: #005f73;
+    border-bottom: 2px solid #94d2bd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+/* About Section */
+.about-section h1 {
+    font-size: 2.5em;
+    color: #005f73;
+    font-family: 'Georgia', serif;
+}
+
+.about-section h2 {
+    font-size: 1.5em;
+    color: #0a9396;
+    font-weight: normal;
+    font-family: 'Verdana', sans-serif;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 1em;
+    color: #333;
+    font-family: 'Verdana', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Work Experience, Education, Projects, and Skills */
+.experience-item, .project-item, .education-item {
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.2em;
+    color: #005f73;
+    font-family: 'Georgia', serif;
+}
+
+.company, .institution {
+    font-style: italic;
+    color: #5f6f81;
+    font-size: 0.9em;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #333;
+}
+
+.skills-section ul, .achievements-section ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Project Section */
+.project-description {
+    font-size: 0.9em;
+    color: #5f6f81;
+}
+
+/* Skills Section */
+.skills-section ul li {
+    font-size: 0.9em;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Achievements Section */
+.achievements-section ul li {
+    font-size: 0.9em;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+}
+
+/* Section Spacing */
+section {
+    margin-bottom: 25px;
+}
+
+/* Hover Effects */
+h4:hover {
+    color: #0a9396;
+    text-decoration: underline;
+}
+
+
+#template-2 {
+    background: #fafafa;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#template-2 h1 {
+    font-size: 2.2em;
+    color: #2a2a2a;
+    font-weight: 700;
+}
+
+#template-2 h2 {
+    font-size: 1.3em;
+    color: #555;
+    font-weight: 400;
+}
+
+#template-2 h3 {
+    font-size: 1.2em;
+    color: #888;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+#template-2 h4 {
+    color: #333;
+    font-weight: bold;
+}
+
+#template-2 ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #666;
+}
+
+#template-2 .project-description, #template-2 .company {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.achievements-section ul li{
+    color: #888;
+}
+
+/* Template 3: */
+#template-3 {
+    display: flex;
+    background: #f5f5f5;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.sidebar {
+    background: #333;
+    color: #fff;
+    width: 35%;
+    padding: 20px;
+    border-radius: 8px 0 0 8px;
+}
+
+.sidebar h1, .sidebar p {
+    margin-bottom: 15px;
+}
+
+.sidebar h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.content {
+    padding: 20px;
+    width: 65%;
+}
+
+#template-3 h4 {
+    color: #444;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.achievements-section ul li {
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.institution, .company {
+    font-style: italic;
+    color: #777;
+}
+
+
+/* Template 4: Bold and Vibrant Resume */
+#template-4 {
+    background-color: #282c34;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+#template-4 .header-section {
+    text-align: center;
+    border-bottom: 2px solid #61dafb;
+    padding-bottom: 20px;
+}
+
+#template-4 h1 {
+    font-size: 2.5em;
+    color: #61dafb;
+}
+
+#template-4 h2 {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+#template-4 p {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+#template-4 .content-wrapper {
+    display: flex;
+    margin-top: 20px;
+}
+
+#template-4 .left-column, #template-4 .right-column {
+    width: 50%;
+    padding: 10px;
+}
+
+#template-4 h3 {
+    font-size: 1.5em;
+    color: #61dafb;
+    border-bottom: 1px solid #61dafb;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#template-4 ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#template-4 ul li {
+    margin-bottom: 5px;
+}
+
+#template-4 .experience-item, .project-item, .education-item {
+    margin-bottom: 15px;
+    
+}
+
+
+
+#template-4 h4 {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+#template-4 .company, .institution, .project-description {
+    color: #ffffff;
+}
+
+/* Template 5: Clean & Professional Resume */
+/* General Styling for Template 5 */
+#template-5 {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+#template-5 .sidebar {
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#template-5 .sidebar h1 {
+    font-size: 1.8em;
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+#template-5 .sidebar h2 {
+    font-size: 1.1em;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+#template-5 .sidebar p {
+    font-size: 0.95em;
+    color: #d1d5db;
+    margin-bottom: 20px;
+}
+
+#template-5 h3 {
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Sidebar Lists */
+#template-5 .sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: #d1d5db;
+}
+
+#template-5 ul li {
+    margin-bottom: 5px;
+}
+
+/* Main Content Styling */
+#template-5 .main-content {
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sections within Main Content */
+#template-5 .experience-item, .project-item, .education-item {
+    margin-bottom: 15px;
+}
+
+#template-5 h4 {
+    color: #333;
+    font-size: 1.2em;
+}
+
+#template-5 .company, .institution, .project-description {
+    color: #666;
+}
