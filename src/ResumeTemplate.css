@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -374,3 +374,4 @@ ul {
 #template-5 .company, .institution, .project-description {
     color: #666;
 }
+

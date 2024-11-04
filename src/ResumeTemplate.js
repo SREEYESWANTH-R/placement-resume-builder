@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./ResumeTemplate.css"
 
-function ResumeTemplate(){
+function ResumeTemplate({data}){
 
 
     const [visibleTemplate, setVisibleTemplate] = useState("template-1");
@@ -27,68 +27,70 @@ function ResumeTemplate(){
     </div>
 
     {/* <!-- Template 1: Elegant Academic Resume --> */}
-    <div className="resume-container" id="template-1">
-        {/* <!-- About Section --> */}
-        <section className="about-section">
-            <h1 id="name">John Doe</h1>
-            <h2 id="title">Computer Science Student</h2>
-            <p id="about">Motivated and dedicated student pursuing a career in software development. Passionate about data science, machine learning, and creating impactful solutions.</p>
-        </section>
+    <div className={`resume-container ${visibleTemplate === "template-1" ? "visible" : "hidden"}`} id="template-1">
+      {/* About Section */}
+      <section className="about-section">
+        <h1 id="name">{data.name}</h1>
+        <p id="about">{data.profileSummary}</p>
+      </section>
 
-        {/* <!-- Work Experience Section --> */}
-        <section className="experience-section">
-            <h3>Work Experience</h3>
-            <div className="experience-item">
-                <h4>Software Development Intern</h4>
-                <p className="company">ABC Corp - June 2022 to August 2022</p>
-                <ul>
-                    <li>Developed and tested web applications using JavaScript and React.</li>
-                    <li>Collaborated with cross-functional teams to enhance application features.</li>
-                </ul>
-            </div>
-        </section>
+      {/* Work Experience Section */}
+      <section className="experience-section">
+        <h3>Work Experience</h3>
+        {data.experiences.map((experience, index) => (
+          <div className="experience-item" key={index}>
+            <h4>{experience.role}</h4>
+            <p className="company">
+              {experience.companyName} - {experience.startDate} to {experience.endDate}
+            </p>
+            <p>{experience.description}</p>
+          </div>
+        ))}
+      </section>
 
-        {/* <!-- Projects Section --> */}
-        <section className="projects-section">
-            <h3>Projects</h3>
-            <div className="project-item">
-                <h4>Portfolio Website</h4>
-                <p className="project-description">A personal portfolio showcasing projects and skills, built with HTML, CSS, and JavaScript.</p>
-            </div>
-        </section>
+      {/* Projects Section */}
+      <section className="projects-section">
+        <h3>Projects</h3>
+        {data.projects.map((project, index) => (
+          <div className="project-item" key={index}>
+            <h4>{project.name}</h4>
+            <p className="project-description">{project.description}</p>
+            <p>{project.startDate} to {project.endDate}</p>
+          </div>
+        ))}
+      </section>
 
-        {/* <!-- Education Section --> */}
-        <section className="education-section">
-            <h3>Education</h3>
-            <div className="education-item">
-                <h4>Bachelor of Science in Computer Science</h4>
-                <p className="institution">University of Technology - Expected Graduation: May 2024</p>
-            </div>
-        </section>
+      {/* Education Section */}
+      <section className="education-section">
+        <h3>Education</h3>
+        <div className="education-item">
+          <p>{data.education}</p>
+        </div>
+      </section>
 
-        {/* <!-- Skills Section --> */}
-        <section className="skills-section">
-            <h3>Skills</h3>
-            <ul>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>Machine Learning</li>
-                <li>Data Analysis</li>
-            </ul>
-        </section>
+      {/* Skills Section */}
+      <section className="skills-section">
+        <h3>Skills</h3>
+        <ul>
+          {data.skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
+      </section>
 
-        {/* <!-- Achievements Section --> */}
-        <section className="achievements-section">
-            <h3>Achievements</h3>
-            <ul>
-                <li>Dean's List - Fall 2021, Spring 2022</li>
-                <li>Winner of University Coding Competition - 2022</li>
-            </ul>
-        </section>
+      {/* Achievements Section */}
+      <section className="achievements-section">
+        <h3>Achievements</h3>
+        <ul>
+          {data.achievements.map((achievement, index) => (
+            <li key={index}>{achievement}</li>
+          ))}
+        </ul>
+      </section>
     </div>
 
     {/* <!-- Template 2: Minimalistic Modern Resume --> */}
-    <div className="resume-container" id="template-2" style={{display: "none"}}>
+    <div  className={`resume-container ${visibleTemplate === "template-1" ? "visible" : "hidden"}`} id="template-2" >
         {/* <!-- About Section --> */}
         <section className="about-section">
             <h1 id="name">Jane Smith</h1>
@@ -135,7 +137,7 @@ function ResumeTemplate(){
     </div>
 
     {/* <!-- Template 3: classNameic Resume with Columns --> */}
-    <div className="resume-container" id="template-3" style={{display:"none"}}>
+    <div  className={`resume-container ${visibleTemplate === "template-1" ? "visible" : "hidden"}`} id="template-3" >
          {/* <!-- Sidebar Section --> */}
          <aside className="sidebar">
             <h1 id="name">Alex Brown</h1>
@@ -180,7 +182,7 @@ function ResumeTemplate(){
 
 
     {/* <!-- Template 4: Bold and Vibrant Resume --> */}
-<div className="resume-container" id="template-4" style={{display:"none"}}>
+<div  className={`resume-container ${visibleTemplate === "template-1" ? "visible" : "hidden"}`} id="template-4" >
     <header className="header-section">
         <h1 id="name">Taylor White</h1>
         <h2 id="title">Software Engineer</h2>
@@ -248,7 +250,7 @@ function ResumeTemplate(){
     </div>
 
     {/* <!-- Template 5: Clean & Professional Resume --> */}
-<div className="resume-container" id="template-5" style={{display:"none"}}>
+<div  className={`resume-container ${visibleTemplate === "template-1" ? "visible" : "hidden"}`} id="template-5" >
     <div className="sidebar">
         <h1 id="name">Jordan Lee</h1>
         <h2 id="title">Data Scientist</h2>
