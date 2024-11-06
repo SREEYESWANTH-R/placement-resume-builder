@@ -113,6 +113,27 @@ body {
     justify-content: space-between;
 }
 
+#template-2 .about-section h1 {
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+}
+
+#template-2 .profile-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+#template-2 h3 {
+    color: #2c3e50;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
 /* section h3 {
     font-size: 1.3em;
     color: #005f73;
