@@ -7,12 +7,16 @@ function App() {
     name: '',
     email: '',
     phone: '',
+    address:'',
+    github:'',
+    linkedIn:'',
     profileSummary: '',
     skills: [''],
-    education: '',
+    educations: [{course:'',clgSch:'',compDate:''}],
     experiences: [{ companyName: '', role: '', description: '', startDate: '', endDate: '', place: '' }],
-    achievements: [''],
+    achievements: [{achieve:'', achDate:''}],
     projects: [{ name: '', description: '', startDate: '', endDate: '' }],
+    certifications:[{certName:'', startDate:'',endDate:''}]
   });
 
   const handleChange = (e) => {
@@ -40,33 +44,49 @@ function App() {
     <div className="App">
       <div className="input-form">
         <h2>Enter Resume Details</h2>
+        <label>Profile:</label>
+        <div className='input-group'>
+         
+          <input type="text" name="name" value={resumeData.name} onChange={handleChange} placeholder='Name'/>
 
-        <label>Name:</label>
-        <input type="text" name="name" value={resumeData.name} onChange={handleChange} />
+          <input type="email" name="email" value={resumeData.email} onChange={handleChange} placeholder='Email' />
 
-        <label>Email:</label>
-        <input type="email" name="email" value={resumeData.email} onChange={handleChange} />
+          <input type="tel" name="phone" value={resumeData.phone} onChange={handleChange} placeholder='Phone'/>
 
-        <label>Phone:</label>
-        <input type="tel" name="phone" value={resumeData.phone} onChange={handleChange} />
+          <input type="text" name="github" value={resumeData.github} onChange={handleChange} placeholder='Github'/>
 
-        <label>Profile Summary:</label>
-        <textarea name="profileSummary" value={resumeData.profileSummary} onChange={handleChange} />
+          <input type="text" name="linkedIn" value={resumeData.linkedIn} onChange={handleChange} placeholder='LinkedIn'/>
 
-        <label>Skills:</label>
-        {resumeData.skills.map((skill, index) => (
+          <input type="text" name="address" value={resumeData.address} onChange={handleChange} placeholder='Address'/>
+
+          <textarea name="profileSummary" value={resumeData.profileSummary} onChange={handleChange} placeholder='Profile Summary'/>
+        </div>
+
+        <label>Education:</label>
+        {resumeData.educations.map((edu, index) => (
           <div key={index} className="input-group">
             <input
               type="text"
-              value={skill}
-              onChange={(e) => handleArrayChange(e, index, null, 'skills')}
+              placeholder="Course"
+              value={edu.course}
+              onChange={(e) => handleArrayChange(e, index, 'course', 'educations')}
             />
+            <input
+              type="text"
+              placeholder="College/School"
+              value={edu.clgSch}
+              onChange={(e) => handleArrayChange(e, index, 'clgSch', 'educations')}
+            />
+            <input
+              type="date"
+              placeholder="Completed Date"
+              value={edu.compDate}
+              onChange={(e) => handleArrayChange(e, index, 'compDate', 'educations')}
+            />
+           
           </div>
         ))}
-        <button onClick={() => addItem('skills', '')}>Add Skill</button>
-
-        <label>Education:</label>
-        <textarea name="education" value={resumeData.education} onChange={handleChange} />
+        <button onClick={() => addItem('educations', { course: '', clgSch: '', compDate: ''})}>Add Education</button>
 
         <label>Experiences:</label>
         {resumeData.experiences.map((exp, index) => (
@@ -111,16 +131,24 @@ function App() {
         <button onClick={() => addItem('experiences', { companyName: '', role: '', description: '', startDate: '', endDate: '', place: '' })}>Add Experience</button>
 
         <label>Achievements:</label>
-        {resumeData.achievements.map((achievement, index) => (
+        {resumeData.achievements.map((ach, index) => (
           <div key={index} className="input-group">
             <input
               type="text"
-              value={achievement}
-              onChange={(e) => handleArrayChange(e, index, null, 'achievements')}
+              placeholder="Achievement"
+              value={ach.achieve}
+              onChange={(e) => handleArrayChange(e, index, 'achieve', 'achievements')}
+            />
+            <input
+              type="date"
+              placeholder="Date"
+              value={ach.achDate}
+              onChange={(e) => handleArrayChange(e, index, 'achDate', 'achievements')}
             />
           </div>
         ))}
-        <button onClick={() => addItem('achievements', '')}>Add Achievement</button>
+        <button onClick={() => addItem('achievements', { achieve: '', achDate: '' })}>Add Achievement</button>
+
 
         <label>Projects:</label>
         {resumeData.projects.map((project, index) => (
@@ -151,6 +179,47 @@ function App() {
           </div>
         ))}
         <button onClick={() => addItem('projects', { name: '', description: '', startDate: '', endDate: '' })}>Add Project</button>
+
+        <label>Skills:</label>
+        {resumeData.skills.map((skill, index) => (
+          <div key={index} className="input-group">
+            <input
+              type="text"
+              value={skill}
+              onChange={(e) => handleArrayChange(e, index, null, 'skills')}
+            />
+          </div>
+        ))}
+        <button onClick={() => addItem('skills', '')}>Add Skill</button>
+
+        <label>Certifications:</label>
+        {resumeData.certifications.map((certificate,index)=>(
+          <div key={index} className='input-group'>
+            <input 
+              type='text' 
+              placeholder='Certification' 
+              name='certName' 
+              value={certificate.certName}
+              onChange={(e) => handleArrayChange(e, index, 'certName', 'certifications')}
+            />
+            <input 
+              type='date' 
+              placeholder='Start Date' 
+              name='startDate' 
+              value={certificate.startDate}
+              onChange={(e) => handleArrayChange(e, index, 'startDate', 'certifications')}
+            />
+            <input 
+              type='date' 
+              placeholder='End Date' 
+              name='endDate' 
+              value={certificate.endDate}
+              onChange={(e) => handleArrayChange(e, index, 'endDate', 'certifications')}
+            />
+          </div>
+        ))}
+        <button onClick={() => addItem('certifications', { certName:'', startDate:'',endDate:'' })}>Add Certificates</button>
+
       </div>
 
       <ResumeTemplate data={resumeData} />
