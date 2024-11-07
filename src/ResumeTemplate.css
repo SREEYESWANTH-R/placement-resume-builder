@@ -16,7 +16,7 @@ body {
 .resume-container {
     width: 210mm; /* A4 size width */
     margin: 20px auto;
-    padding: 10px 30px;
+    padding: 10px;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
     background-color: #ffffff;
@@ -106,6 +106,7 @@ body {
 
 #template-1 ul li{
     font-size: 0.9em;
+    
 }
 
 #template-1 .skills{
@@ -113,449 +114,310 @@ body {
     justify-content: space-between;
 }
 
-#template-2 .about-section h1 {
-    font-size: 1.8em;
-    color: #333;
-    text-align: center;
+#template-1  .skill{
+    font-size: 0.9em;
 }
 
-#template-2 .profile-info {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 15px;
-}
-
-#template-2 h3 {
-    color: #2c3e50;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-
-
-/* section h3 {
-    font-size: 1.3em;
-    color: #005f73;
-    border-bottom: 2px solid #94d2bd;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    font-family: 'Georgia', serif;
-}
-
-
-
-
-
-
-
-.about-section h2 {
-    font-size: 1.5em;
+#template-1 .certificate-names span {
     color: #0a9396;
-    font-weight: normal;
-    font-family: 'Verdana', sans-serif;
-    margin-bottom: 10px;
 }
 
-
-
-.profile-info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: small;
-}
-
-.experience-item, .project-item, .education-item {
-    margin-bottom: 20px;
-}
-
-h4 {
-    font-size: 1.2em;
-    color: #005f73;
-    font-family: 'Georgia', serif;
-}
-
-.company, .institution {
-    font-style: italic;
-    color: #5f6f81;
-    font-size: 0.9em;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #333;
-}
-
-.skills-section ul, .achievements-section ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-
-.project-description {
-    font-size: 0.9em;
-    color: #5f6f81;
-}
-
-.skills-section ul li {
-    font-size: 0.9em;
-    font-family: 'Verdana', sans-serif;
-}
-
-.certifications-section ul li{
-    width: 100%;
-    display:flex;
-    list-style:circle;
-}
-
-.achievements-section ul li {
-    font-size: 0.9em;
-    font-family: 'Verdana', sans-serif;
-    color: #000000;
-}
-
-section {
-    margin-bottom: 25px;
-}
-
-
-h4:hover {
+#template-1 .achieve-names span{
     color: #0a9396;
-    text-decoration: underline;
 }
 
-
-#template-2 {
-    background: #fafafa;
-    color: #444;
-    font-family: 'Roboto', sans-serif;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#template-2 h1 {
-    font-size: 2.2em;
-    color: #2a2a2a;
-    font-weight: 700;
-}
-
-#template-2 h2 {
-    font-size: 1.3em;
-    color: #555;
-    font-weight: 400;
-}
-
-#template-2 h3 {
-    font-size: 1.2em;
-    color: #888;
-    text-transform: uppercase;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-#template-2 h4 {
-    color: #333;
-    font-weight: bold;
-}
-
-#template-2 ul {
-    list-style-type: square;
-    padding-left: 20px;
-    color: #666;
-}
-
-#template-2 .project-description, #template-2 .company {
-    color: #888;
+#template-1 .achieve-names{
     font-size: 0.9em;
 }
 
-.achievements-section ul li{
-    color: #888;
+#template-1 .certificate-names{
+    font-size: 0.9em;
 }
 
-#template-3 {
+
+
+
+/*Template-3 */
+
+/* General Resume Container Layout */
+#template-3.resume-container {
     display: flex;
-    background: #f5f5f5;
+    padding: 20px;
+    background-color: #ffffff;
     color: #333;
-    font-family: 'Arial', sans-serif;
-    max-width: 900px;
+    width: 210mm; /* A4 size width */
     margin: 20px auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-.sidebar {
-    background: #333;
-    color: #fff;
-    width: 35%;
-    padding: 20px;
-    border-radius: 8px 0 0 8px;
-}
-
-.sidebar h1, .sidebar p {
-    margin-bottom: 15px;
-}
-
-.sidebar h3 {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-.content {
-    padding: 20px;
-    width: 65%;
-}
-
-#template-3 h4 {
-    color: #444;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.achievements-section ul li {
-    color: #ffffff;
-}
-
-ul {
-    list-style-type: circle;
-    padding-left: 20px;
-}
-
-.institution, .company {
-    font-style: italic;
-    color: #777;
-}
-
-
-
-#template-4 {
-    background-color: #282c34;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 900px;
-    margin: 20px auto;
-}
-
-#template-4 .header-section {
-    text-align: center;
-    border-bottom: 2px solid #61dafb;
-    padding-bottom: 20px;
-}
-
-#template-4 h1 {
-    font-size: 2.5em;
-    color: #61dafb;
-}
-
-#template-4 h2 {
-    font-size: 1.2em;
-    color: #ffffff;
-}
-
-#template-4 p {
-    font-size: 1em;
-    color: #ffffff;
-}
-
-#template-4 .content-wrapper {
-    display: flex;
-    margin-top: 20px;
-}
-
-#template-4 .left-column, #template-4 .right-column {
-    width: 50%;
+/* Sidebar Styling for Template-3 */
+#template-3 .sidebar {
+    flex: 1;
+    background-color: #1f3a93; /* Dark sidebar color */
+    color: white;
     padding: 10px;
-}
-
-#template-4 h3 {
-    font-size: 1.5em;
-    color: #61dafb;
-    border-bottom: 1px solid #61dafb;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
-
-#template-4 ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#template-4 ul li {
-    margin-bottom: 5px;
-}
-
-#template-4 .experience-item, .project-item, .education-item {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     
 }
 
-
-
-#template-4 h4 {
-    color: #ffffff;
-    font-size: 1.2em;
+#template-3 .name {
+    font-size: 1.3em;
+    color: #f39c12;
 }
 
-#template-4 .company, .institution, .project-description {
-    color: #ffffff;
-}
-
-
-#template-5 {
+#template-3 .contact-info p {
     display: flex;
-    max-width: 900px;
-    margin: 20px auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    color: #ffffff;
 }
 
-#template-5 .sidebar {
-    width: 30%;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+/* Skills Section in Sidebar */
+#template-3 .skills-section h3,
+#template-3 .languages-section h3,
+#template-3 .soft-skills-section h3,
+#template-3 .certifications-section h3,
+#template-3 .achievements-section h3 {
+    font-size: 1.1em;
+    margin-bottom: 4px;
+    color: #f39c12;
+}
+
+#template-3 .skills-section ul,
+#template-3 .languages-section ul,
+#template-3 .soft-skills-section ul {
+    list-style-type:disc;
+    padding-left: 15px;
+    font-size: 0.8em;
+    color: #dcdcdc;
+}
+
+/* Main Content Styling for Template-3 */
+#template-3 .main-content {
+    flex: 2;
+    padding: 10px 12px;
+    background-color: #ffffff;
+}
+
+#template-3 h3 {
+    font-size: 1.1em;
+    color: #1f3a93;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+#template-3 .profile-section p {
+    font-size: 0.8em;
+    color: #333333;
+    text-align: justify;
+    /* margin-bottom: 20px; */
+}
+
+#template-3 .experience-section h4,
+#template-3 .projects-section h4
+ {
+    font-size: 0.9em;
+    color: #333333;
+}
+
+#template-3 .education-item strong{
+    font-size: 0.8em;
+    color: #333333;
+}
+
+#template-3 .experience-item,
+#template-3 .project-item,
+#template-3 .education-item {
+    margin-bottom: 10px;
+}
+
+#template-3 .company,
+#template-3 .date {
+    font-size: 0.8em;
+    color: #555555;
+}
+
+#template-3 .experience-description,
+#template-3 .project-description {
+    font-size: 0.8em;
+    color: #666666;
+    text-align: justify;
+}
+
+#template-3 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.8em;
+}
+
+#template-3 .certifications-section ul,
+#template-3 .achievements-section ul
+{
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+
+/* Template-4 */
+
+/* Template 4: Modern Two-Column Layout */
+#template-4 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    width: 210mm;
+    margin: 20px auto;
+    background-color: #ffffff;
+    color: #333;
 }
 
-#template-5 .sidebar h1 {
+/* Header Section */
+#template-4 .header-section {
+    text-align: center;
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 10px;
+    
+}
+
+#template-4 #name {
     font-size: 1.8em;
-    color: #ffcc00;
     margin-bottom: 5px;
 }
 
-#template-5 .sidebar h2 {
+#template-4 .profile-info p {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    font-size: 0.9em;
+    color: #e0e0e0;
+}
+
+#template-4 .summary {
+    font-size: 0.9em;
+    color: #e0e0e0;
+    margin-top: 15px;
+}
+
+/* Content Container */
+#template-4 .content-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Column */
+#template-4 .left-column {
+    flex: 2;
+}
+
+#template-4 .experience-section h3,
+#template-4 .projects-section h3 {
     font-size: 1.1em;
-    color: #ffcc00;
-    margin-bottom: 15px;
-}
-
-#template-5 .sidebar p {
-    font-size: 0.95em;
-    color: #d1d5db;
-    margin-bottom: 20px;
-}
-
-#template-5 h3 {
-    color: #ffcc00;
-    border-bottom: 2px solid #ffcc00;
+    color: #005f73;
+    border-bottom: 2px solid #94d2bd;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
-
-#template-5 .sidebar ul {
-    list-style-type: none;
-    padding-left: 0;
-    color: #d1d5db;
+#template-4 .experience-item h4,
+#template-4 .project-item h4 {
+    font-size: 0.9em;
+    color: #333333;
 }
 
-#template-5 ul li {
-    margin-bottom: 5px;
+#template-4 .experience-description,
+#template-4 .project-description {
+    font-size: 0.8em;
+    color: #666666;
+    text-align: justify;
 }
 
-#template-5 .main-content {
-    width: 70%;
-    background-color: #fff;
-    padding: 20px;
+/* Right Column */
+#template-4 .right-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
-
-#template-5 .experience-item, .project-item, .education-item {
-    margin-bottom: 15px;
-}
-
-#template-5 h4 {
-    color: #333;
-    font-size: 1.2em;
-}
-
-#template-5 .company, .institution, .project-description {
-    color: #666;
-} */
-
-
-
-
-/* Styling for resume template with ID resumeTemplate1 */
-/* #resumeTemplate1 {
-    font-family: Arial, sans-serif;
-    width: 210mm;
-    min-height: 297mm;
-    padding: 20mm;
-    margin: auto;
-    background-color: white;
-    color: #333;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  #resumeTemplate1 header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  #resumeTemplate1 h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  #resumeTemplate1 #contact,
-  #resumeTemplate1 #social-links {
-    font-size: 14px;
-    margin: 5px 0;
-  }
-  
-  #resumeTemplate1 section {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  
-  #resumeTemplate1 h2 {
-    font-size: 18px;
+/* Section Titles */
+#template-4 .education-section h3,
+#template-4 .skills-section h3,
+#template-4 .soft-skills-section h3,
+#template-4 .languages-section h3,
+#template-4 .achievements-section h3,
+#template-4 .certifications-section h3 {
+    font-size: 1em;
+    color: #005f73;
+    border-bottom: 2px solid #94d2bd;
+    padding-bottom: 5px;
     margin-bottom: 8px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 4px;
+}
+
+/* Skills and Languages */
+#template-4 .skills-section ul,
+#template-4 .soft-skills-section ul,
+#template-4 .languages-section ul {
+    list-style-type: square;
+    padding-left: 15px;
+    color: #555555;
+    font-size: 0.8em;
+}
+
+/* Achievements and Certifications */
+#template-4 .achievements-section ul,
+#template-4 .certifications-section ul {
+    padding-left: 15px;
+    font-size: 0.8em;
+}
+
+#template-4 ul {
+    margin-top: 5px;
+}
+
+
+
+.print-button {
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #005f73;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
   
-  #resumeTemplate1 ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  .education-entry, .experience-entry, .achievement-entry, .project-entry, .certification-entry {
-    margin-bottom: 10px;
-  }
-  
-  #skills ul {
-    columns: 2;
-  }
-  
-  #resumeTemplate1 p, #resumeTemplate1 li {
-    font-size: 14px;
-    line-height: 1.5;
+  .print-button:hover {
+    background-color: #0a9396;
   }
   
   @media print {
-    #resumeTemplate1 {
+    body * {
+      visibility: hidden;
+    }
+  
+    .resume-container.visible, .resume-container.visible * {
+      visibility: visible;
+    }
+  
+    .resume-container {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-      padding: 10mm;
-      box-shadow: none;
       margin: 0;
     }
-  } */
   
+    #template-selector,
+    .print-button {
+      display: none;
+    }
+  }
+
+
