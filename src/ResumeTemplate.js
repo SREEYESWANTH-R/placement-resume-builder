@@ -28,13 +28,14 @@ function ResumeTemplate({data}){
           <option value="template-2">Modern Professional Resume</option>
           <option value="template-3">Creative Sidebar Resume</option>
           <option value="template-4">Two column Resume</option>
+          <option value="template-5">Modern Sidebar Resume</option>
         </select>
       </div>
 
       <button className="print-button"  onClick={printCV}>Print Resume</button>
 
-   {/* <!-- Template 1: Elegant Academic Resume --> */}
-   {visibleTemplate === "template-1" && (
+{/* <!-- Template 1: Elegant Academic Resume --> */}
+{visibleTemplate === "template-1" && (
     <div className="resume-container visible" id="template-1">
         {/* About Section */}
         <section className="about-section">
@@ -124,9 +125,6 @@ function ResumeTemplate({data}){
             
         </div>
        
-
-        
-        
         <div className='skills'>
             <section className="skills-section">
                     <h3>Skills</h3>
@@ -159,9 +157,94 @@ function ResumeTemplate({data}){
     </div>
 )}
 
+{visibleTemplate === "template-2" && (
+  <div className="resume-container visible" id="template-2">
+    <aside className="sidebar">
+      <h1>{data.name}</h1>
+      <p className="profile-title">{data.profileSummary}</p>
+      <div className="contact-info">
+        <p><MailOutline /> {data.email}</p>
+        <p><Phone /> {data.phone}</p>
+        <p><Place /> {data.address}</p>
+        <p><GitHub /> {data.github}</p>
+        <p><LinkedIn /> {data.linkedIn}</p>
+      </div>
+      
+      <section className="skills-section">
+        <h3>Skills</h3>
+        <ul>
+          {data.skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="languages-section">
+        <h3>Languages</h3>
+        <ul>
+          {data.Languages.map((language, index) => (
+            <li key={index}>{language}</li>
+          ))}
+        </ul>
+      </section>
+    </aside>
+
+    <div className="main-content">
+      <section className="experience-section">
+        <h3>Work Experience</h3>
+        {data.experiences.map((experience, index) => (
+          <div key={index} className="experience-item">
+            <h4>{experience.role}</h4>
+            <p>{experience.companyName}, {experience.place} ({experience.startDate} - {experience.endDate})</p>
+            <p>{experience.description}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="projects-section">
+        <h3>Projects</h3>
+        {data.projects.map((project, index) => (
+          <div key={index} className="project-item">
+            <h4>{project.name}</h4>
+            <p>{project.startDate} - {project.endDate}</p>
+            <p>{project.description}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="education-section">
+        <h3>Education</h3>
+        {data.educations.map((education, index) => (
+          <div key={index} className="education-item">
+            <h4>{education.course}</h4>
+            <p>{education.clgSch} - {education.compDate}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="achievements-section">
+        <h3>Achievements</h3>
+        <ul>
+          {data.achievements.map((achievement, index) => (
+            <li key={index}>{achievement.achieve} ({achievement.achDate})</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="certifications-section">
+        <h3>Certifications</h3>
+        <ul>
+          {data.certifications.map((certificate, index) => (
+            <li key={index}>{certificate.certName} ({certificate.startDate} - {certificate.endDate})</li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  </div>
+)}
 
 
-  {visibleTemplate === "template-3" && (
+{visibleTemplate === "template-3" && (
   <div className="resume-container visible" id="template-3">
     {/* Sidebar Section */}
     <aside className="sidebar">
@@ -367,8 +450,114 @@ function ResumeTemplate({data}){
   </div>
 )}
 
+{visibleTemplate === "template-5" && (
+  <div className="resume-container visible" id="template-5">
+    {/* Sidebar Section */}
+    <aside className="sidebar">
+      <h1 className="name">{data.name}</h1>
+      <div className="contact-info">
+        <p><MailOutline /> {data.email}</p>
+        <p><Phone /> {data.phone}</p>
+        <p><Place /> {data.address}</p>
+        <p><GitHub /> {data.github}</p>
+        <p><LinkedIn /> {data.linkedIn}</p>
+      </div>
+      <section className="skills-section">
+        <h3>Skills</h3>
+        <ul>
+          {data.skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
+      </section>
 
-    </div>
+      <section className="languages-section">
+        <h3>Languages</h3>
+        <ul>
+          {data.Languages.map((lang, index) => (
+            <li key={index}>{lang}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="soft-skills-section">
+        <h3>Soft Skills</h3>
+        <ul>
+          {data.softSkills.map((softSkill, index) => (
+            <li key={index}>{softSkill}</li>
+          ))}
+        </ul>
+      </section>    
+      
+      
+      <section className="certifications-section">
+        <h3>Certifications</h3>
+        <ul>
+          {data.certifications.map((certificate, index) => (
+            <li key={index}>
+              {certificate.certName} ({certificate.startDate} to {certificate.endDate})
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="achievements-section">
+        <h3>Achievements</h3>
+        <ul>
+          {data.achievements.map((achievement, index) => (
+            <li key={index}>{achievement.achieve} - {achievement.achDate}</li>
+          ))}
+        </ul>
+      </section>
+
+    </aside>
+
+    {/* Main Content Section */}
+    <main className="main-content">
+      <section className="profile-section">
+        <h3>Profile Summary</h3>
+        <p>{data.profileSummary}</p>
+      </section>
+
+      <section className="experience-section">
+        <h3>Work Experience</h3>
+        {data.experiences.map((experience, index) => (
+          <div className="experience-item" key={index}>
+            <h4>{experience.role}</h4>
+            <p className="company">{experience.companyName} | {experience.place}</p>
+            <p className="date">{experience.startDate} - {experience.endDate}</p>
+            <p>{experience.description}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="projects-section">
+        <h3>Projects</h3>
+        {data.projects.map((project, index) => (
+          <div className="project-item" key={index}>
+            <h4>{project.name}</h4>
+            <p>{project.startDate} - {project.endDate}</p>
+            <p>{project.description}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="education-section">
+        <h3>Education</h3>
+        {data.educations.map((education, index) => (
+          <div className="education-item" key={index}>
+            <p><strong>{education.course}</strong></p>
+            <p>{education.clgSch} - {education.compDate}</p>
+          </div>
+        ))}
+      </section>
+    </main>
+  </div>
+)}
+
+
+
+</div>
   )
 }
 
